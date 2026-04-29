@@ -34,3 +34,47 @@ print(f" set2 is not changed: {set2}")  # we can check that set2 is not changed 
 set1 &= set2  # we can also get the common elements of two sets by using &= operator
 print(f" set1 is updated to common elements: {set1}")  # we can check that set1 is updated by using print function
 print(f" set2 is not changed: {set2}")  # we can check that set2 is not changed by using print function
+
+
+
+print("============difference of sets===========")
+# we can get the elements of the first set that are not in the second set by using difference method
+set3 = {1, 2, 3, 4, 5}
+set4 = {4, 5, 6, 7, 8}
+diff = set3.difference(set4)  # we can get the elements of the first set that are not in the second set by using difference method
+print(f" elements in set3 but not in set4 are: {diff}")
+
+diff2 = set3 - set4  # we can also get the elements of the first set that are not in the second set by using - operator
+print(f" elements in set3 but not in set4 are: {diff2}")
+
+set3.difference_update(set4)  # we can also get the elements of the first set that are not in the second set by using difference_update method
+print(f" set3 is updated to elements that are not in set4: {set3}")  # we can check that set3 is updated by using print function
+print(f" set4 is not changed: {set4}")  # we can check that set4 is not changed by using print function
+
+set3 -= set4  # we can also get the elements of the first set that are not in the second set by using -= operator
+print(f" set3 is updated to elements that are not in set4: {set3}")  # we can check that set3 is updated by using print function
+print(f" set4 is not changed: {set4}")  # we can check that set4 is not changed by using print function
+
+print("============symmetric difference of sets===========")
+# we can get the elements that are in either of the sets but not in both sets by using symmetric_difference method
+set5 = {1, 2, 3, 4, 5}
+set6 = {4, 5, 6, 7, 8}
+symdiff = set5.symmetric_difference(set6)  # we can get the elements that are in either of the sets but not in both sets by using symmetric_difference method
+print(f" elements that are in either of the sets but not in both sets are: {symdiff}")
+
+symdiff2 = set5 ^ set6  # we can also get the elements that are in either of the sets but not in both sets by using ^ operator
+print(f" elements that are in either of the sets but not in both sets are: {symdiff2}")
+
+set5.symmetric_difference_update(set6)  # we can also get the elements that are in either of the sets but not in both sets by using symmetric_difference_update method
+print(f" set5 is updated to elements that are in either of the sets but not in both sets: {set5}")  # we can check that set5 is updated by using print function
+print(f" set6 is not changed: {set6}")  # we can check that set6 is not changed by using print function
+
+
+
+print("=============comparison of sets================")
+color4 = {'red', 'green', 'blue'}
+color5 = {'yellow'}
+color6 = {'red', 'green', 'blue'}
+print(f" isdisjoint: {color4 . isdisjoint(color6)}")  # two sets are disjoint if they have no common elements
+print(f" issubset: {color4 . issubset(color5)}")  # we can check if a set is contains all element of another set by using issubset method
+print(f" issuperset: {color4 . issuperset(color6)}")  # we can check if a set is contains all element of another set by using issuperset method
